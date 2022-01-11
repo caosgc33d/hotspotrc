@@ -1,0 +1,2 @@
+# hotspotrc
+Hotspot mutation readcount
