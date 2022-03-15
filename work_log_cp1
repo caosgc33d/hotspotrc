@@ -1,7 +1,7 @@
 #perl -e '$f="liftover_hg38.tcga.driver.gene.mut"; foreach $l (`cat $f`) { $ltr=$l; chomp($ltr); @t=split("\t",$ltr); $uid=$t[0]."_".$t[1]."_".$t[2]; if(!defined $pos{$uid}) { print $t[0],"\t",$t[1],"\t",$t[2],"\n"; $pos{$uid}=1; }  } ' > hotspot.tcga.driver.chr.pos.tsv
 
 ##1. 
-/storage1/fs1/songcao/Active/Software/bam-readcount/0.7.4/bam-readcount -q 10 -b 10 /storage1/fs1/dinglab/Active/Projects/scao/alchemist/somatic/b3/ALCH-AD3K-TTP1-A/ALCH-AD3K-TTP1-A.T.bam -f /storage1/fs1/songcao/Active/Database/hg38_database/GRCh38.d1.vd1/GRCh38.d1.vd1.fa -l /storage1/fs1/songcao/Active/Database/hotspotdb/hotspot.tcga.driver.chr.pos.tsv > rc.ALCH-AD3K-TTP1-A.hotspot.ts
+/storage1/fs1/songcao/Active/Software/bam-readcount/0.7.4/bam-readcount -q 10 -b 10 /storage1/fs1/dinglab/Active/Projects/scao/alchemist/somatic/b3/ALCH-AD3K-TTP1-A/ALCH-AD3K-TTP1-A.T.bam -f /storage1/fs1/songcao/Active/Database/hg38_database/GRCh38.d1.vd1/GRCh38.d1.vd1.fa -l /storage1/fs1/songcao/Active/Database/hotspotdb/hotspot.tcga.driver.chr.pos.tsv > rc.ALCH-AD3K-TTP1-A.hotspot.tsv
 
 ##2
 perl bamReadcount2vaf.pl -s ALCH-AD3K-TTP1-A -l ../../Database/hotspotdb/liftover_hg38.tcga.driver.gene.mut rc.ALCH-AD3K-TTP1-A.hotspot.tsv > hotspot.tcga.driver.chr.pos.vaf

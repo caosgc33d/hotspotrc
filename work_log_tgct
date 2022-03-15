@@ -1,0 +1,3 @@
+perl hotspotrc.pl --rdir  /storage1/fs1/dinglab/Active/Projects/scao/tgct/rc/hotspot --log /storage1/fs1/dinglab/Active/Projects/scao/tgct/rc/hotspot.log --ref /storage1/fs1/songcao/Active/Database/hg38_database/GRCh38.d1.vd1/GRCh38.d1.vd1.fa --users songcao --groupname GermlineWXS --q general --step 0
+
+perl hotspotrc.pl --rdir  /storage1/fs1/dinglab/Active/Projects/scao/tgct/rc/hotspot --log /storage1/fs1/dinglab/Active/Projects/scao/tgct/rc/hotspot.log --ref /storage1/fs1/songcao/Active/Database/hg38_database/GRCh38.d1.vd1/GRCh38.d1.vd1.fa --users songcao --groupname GermlineWXS --q general --step 1
