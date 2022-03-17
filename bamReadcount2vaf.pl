@@ -38,7 +38,7 @@ my $file = shift;
 my @bamRC=`cat $file`;
 
 # from loci
-my @dataLoci=`cut -f 1-3,7,8 $loci`;
+my @dataLoci=`cut -f 1-5 $loci`;
 
 # make hash for bamReadcount data
 my %hashBamRC;
